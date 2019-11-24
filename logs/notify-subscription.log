@@ -1,0 +1,34 @@
+2019-11-24 16:30:34,991 - Creating Service {http://impl.service.study.cjw.com/}HelloServiceImplService from class com.cjw.study.service.HelloService
+2019-11-24 16:30:35,574 - Setting the server's publish address to be http://localhost:8000/ws/hello
+2019-11-24 16:30:35,613 - jetty-8.1.15.v20140411
+2019-11-24 16:30:35,675 - Started SelectChannelConnector@localhost:8000
+2019-11-24 16:30:43,757 - Creating Service {http://service.study.cjw.com/}HelloServiceService from class com.cjw.study.service.HelloService
+2019-11-24 16:34:32,467 - Creating Service {http://impl.service.study.cjw.com/}HelloServiceImplService from class com.cjw.study.service.HelloService
+2019-11-24 16:34:33,251 - Setting the server's publish address to be http://localhost:8000/ws/hello
+2019-11-24 16:34:33,291 - jetty-8.1.15.v20140411
+2019-11-24 16:34:33,403 - Started SelectChannelConnector@localhost:8000
+2019-11-24 16:34:38,618 - Creating Service {http://service.study.cjw.com/}HelloServiceService from class com.cjw.study.service.HelloService
+2019-11-24 16:34:40,168 - Inbound Message
+----------------------------
+ID: 1
+Address: http://localhost:8000/ws/hello
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml; charset=UTF-8
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], Content-Length=[196], content-type=[text/xml; charset=UTF-8], Host=[localhost:8000], Pragma=[no-cache], SOAPAction=[""], User-Agent=[Apache CXF 3.0.1]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:sayHello xmlns:ns2="http://service.study.cjw.com/"><arg0>cjw</arg0></ns2:sayHello></soap:Body></soap:Envelope>
+--------------------------------------
+2019-11-24 16:34:40,309 - Outbound Message
+---------------------------
+ID: 1
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml
+Headers: {}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:sayHelloResponse xmlns:ns2="http://service.study.cjw.com/"><return>cjw, Welcome to Tianjin</return></ns2:sayHelloResponse></soap:Body></soap:Envelope>
+--------------------------------------
+2019-11-24 22:24:46,224 - Setting the server's publish address to be Http:localhost:8001/ws/*
+2019-11-24 23:44:36,728 - Setting the server's publish address to be Http:localhost:8001/ws/*
+2019-11-24 23:45:56,098 - Setting the server's publish address to be Http://localhost:8001/ws/*
+2019-11-24 23:46:49,649 - Setting the server's publish address to be Http://localhost:8001/ws/
+2019-11-24 23:50:34,524 - Setting the server's publish address to be Http://localhost:8002/ws/
