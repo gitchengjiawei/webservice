@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/03_jaxws_spring_server" />
+    <file type="web" url="file://$PROJECT_DIR$/07_jaxrs_spring_server" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -12,6 +13,8 @@
         <option value="$PROJECT_DIR$/04_jaxws_spring_client/pom.xml" />
         <option value="$PROJECT_DIR$/05_jaxrs_server/pom.xml" />
         <option value="$PROJECT_DIR$/06_jaxrs_client/pom.xml" />
+        <option value="$PROJECT_DIR$/07_jaxrs_spring_server/pom.xml" />
+        <option value="$PROJECT_DIR$/08_jaxrs_spring_client/pom.xml" />
       </list>
     </option>
   </component>

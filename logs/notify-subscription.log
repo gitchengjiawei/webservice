@@ -1,34 +1,153 @@
-2019-11-24 16:30:34,991 - Creating Service {http://impl.service.study.cjw.com/}HelloServiceImplService from class com.cjw.study.service.HelloService
-2019-11-24 16:30:35,574 - Setting the server's publish address to be http://localhost:8000/ws/hello
-2019-11-24 16:30:35,613 - jetty-8.1.15.v20140411
-2019-11-24 16:30:35,675 - Started SelectChannelConnector@localhost:8000
-2019-11-24 16:30:43,757 - Creating Service {http://service.study.cjw.com/}HelloServiceService from class com.cjw.study.service.HelloService
-2019-11-24 16:34:32,467 - Creating Service {http://impl.service.study.cjw.com/}HelloServiceImplService from class com.cjw.study.service.HelloService
-2019-11-24 16:34:33,251 - Setting the server's publish address to be http://localhost:8000/ws/hello
-2019-11-24 16:34:33,291 - jetty-8.1.15.v20140411
-2019-11-24 16:34:33,403 - Started SelectChannelConnector@localhost:8000
-2019-11-24 16:34:38,618 - Creating Service {http://service.study.cjw.com/}HelloServiceService from class com.cjw.study.service.HelloService
-2019-11-24 16:34:40,168 - Inbound Message
+2019-12-01 19:55:32,569 - Setting the server's publish address to be Http://localhost:8002/ws
+2019-12-01 19:57:00,981 - Setting the server's publish address to be Http://localhost:8002/ws
+2019-12-01 20:01:15,315 - Setting the server's publish address to be Http://localhost:8002/ws/
+2019-12-01 20:07:49,905 - Setting the server's publish address to be http://localhost:8002/ws/
+2019-12-01 20:07:50,042 - jetty-8.1.15.v20140411
+2019-12-01 20:07:50,148 - Started SelectChannelConnector@localhost:8002
+2019-12-01 20:08:13,459 - Inbound Message
 ----------------------------
 ID: 1
-Address: http://localhost:8000/ws/hello
-Encoding: UTF-8
+Address: http://localhost:8002/ws/userService/user
+Encoding: ISO-8859-1
 Http-Method: POST
-Content-Type: text/xml; charset=UTF-8
-Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], Content-Length=[196], content-type=[text/xml; charset=UTF-8], Host=[localhost:8000], Pragma=[no-cache], SOAPAction=[""], User-Agent=[Apache CXF 3.0.1]}
-Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:sayHello xmlns:ns2="http://service.study.cjw.com/"><arg0>cjw</arg0></ns2:sayHello></soap:Body></soap:Envelope>
+Content-Type: application/xml
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], Content-Length=[124], content-type=[application/xml], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+Payload: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><User><city>åäº¬</city><id>2</id><username>å°çº¢</username></User>
 --------------------------------------
-2019-11-24 16:34:40,309 - Outbound Message
+2019-12-01 20:08:13,737 - Outbound Message
 ---------------------------
 ID: 1
-Response-Code: 200
-Encoding: UTF-8
-Content-Type: text/xml
-Headers: {}
-Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:sayHelloResponse xmlns:ns2="http://service.study.cjw.com/"><return>cjw, Welcome to Tianjin</return></ns2:sayHelloResponse></soap:Body></soap:Envelope>
+Response-Code: 204
+Content-Type: 
+Headers: {Date=[Sun, 01 Dec 2019 12:08:13 GMT], Content-Length=[0]}
 --------------------------------------
-2019-11-24 22:24:46,224 - Setting the server's publish address to be Http:localhost:8001/ws/*
-2019-11-24 23:44:36,728 - Setting the server's publish address to be Http:localhost:8001/ws/*
-2019-11-24 23:45:56,098 - Setting the server's publish address to be Http://localhost:8001/ws/*
-2019-11-24 23:46:49,649 - Setting the server's publish address to be Http://localhost:8001/ws/
-2019-11-24 23:50:34,524 - Setting the server's publish address to be Http://localhost:8002/ws/
+2019-12-01 20:11:13,561 - Inbound Message
+----------------------------
+ID: 2
+Address: http://localhost:8002/ws/userService/user
+Encoding: ISO-8859-1
+Http-Method: PUT
+Content-Type: application/xml
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], Content-Length=[124], content-type=[application/xml], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+Payload: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><User><city>åäº¬</city><id>2</id><username>å°çº¢</username></User>
+--------------------------------------
+2019-12-01 20:11:13,565 - Outbound Message
+---------------------------
+ID: 2
+Response-Code: 204
+Content-Type: 
+Headers: {Date=[Sun, 01 Dec 2019 12:11:13 GMT], Content-Length=[0]}
+--------------------------------------
+2019-12-01 20:12:45,946 - Inbound Message
+----------------------------
+ID: 3
+Address: http://localhost:8002/ws/userService/user
+Http-Method: GET
+Content-Type: */*
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], content-type=[*/*], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+--------------------------------------
+2019-12-01 20:12:45,962 - Outbound Message
+---------------------------
+ID: 3
+Response-Code: 200
+Content-Type: application/xml
+Headers: {Content-Type=[application/xml], Date=[Sun, 01 Dec 2019 12:12:45 GMT]}
+Payload: <?xml version="1.0" encoding="UTF-8"?><Users><User><cars><carName>兰博基尼</carName><id>1</id><price>5.0E9</price></cars><cars><carName>宾利</carName><id>2</id><price>1.0E8</price></cars><city>天津</city><id>1</id><username>小明</username></User><User><city>北京</city><id>2</id><username>小红</username></User></Users>
+--------------------------------------
+2019-12-01 20:14:27,911 - Inbound Message
+----------------------------
+ID: 4
+Address: http://localhost:8002/ws/userService/user
+Http-Method: GET
+Content-Type: */*
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], content-type=[*/*], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+--------------------------------------
+2019-12-01 20:14:27,916 - Outbound Message
+---------------------------
+ID: 4
+Response-Code: 200
+Content-Type: application/xml
+Headers: {Content-Type=[application/xml], Date=[Sun, 01 Dec 2019 12:14:27 GMT]}
+Payload: <?xml version="1.0" encoding="UTF-8"?><Users><User><cars><carName>兰博基尼</carName><id>1</id><price>5.0E9</price></cars><cars><carName>宾利</carName><id>2</id><price>1.0E8</price></cars><city>天津</city><id>1</id><username>小明</username></User><User><city>北京</city><id>2</id><username>小红</username></User></Users>
+--------------------------------------
+2019-12-01 20:16:13,733 - Inbound Message
+----------------------------
+ID: 5
+Address: http://localhost:8002/ws/userService/user
+Http-Method: GET
+Content-Type: */*
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], content-type=[*/*], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+--------------------------------------
+2019-12-01 20:16:13,737 - Outbound Message
+---------------------------
+ID: 5
+Response-Code: 200
+Content-Type: application/xml
+Headers: {Content-Type=[application/xml], Date=[Sun, 01 Dec 2019 12:16:13 GMT]}
+Payload: <?xml version="1.0" encoding="UTF-8"?><Users><User><cars><carName>兰博基尼</carName><id>1</id><price>5.0E9</price></cars><cars><carName>宾利</carName><id>2</id><price>1.0E8</price></cars><city>天津</city><id>1</id><username>小明</username></User><User><city>北京</city><id>2</id><username>小红</username></User></Users>
+--------------------------------------
+2019-12-01 20:25:11,700 - Inbound Message
+----------------------------
+ID: 6
+Address: http://localhost:8002/ws/userService/user
+Http-Method: GET
+Content-Type: application/json
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], content-type=[application/json], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+--------------------------------------
+2019-12-01 20:25:11,704 - Outbound Message
+---------------------------
+ID: 6
+Response-Code: 200
+Content-Type: application/xml
+Headers: {Content-Type=[application/xml], Date=[Sun, 01 Dec 2019 12:25:11 GMT]}
+Payload: <?xml version="1.0" encoding="UTF-8"?><Users><User><cars><carName>兰博基尼</carName><id>1</id><price>5.0E9</price></cars><cars><carName>宾利</carName><id>2</id><price>1.0E8</price></cars><city>天津</city><id>1</id><username>小明</username></User><User><city>北京</city><id>2</id><username>小红</username></User></Users>
+--------------------------------------
+2019-12-01 20:26:25,341 - Inbound Message
+----------------------------
+ID: 7
+Address: http://localhost:8002/ws/userService/user
+Encoding: ISO-8859-1
+Http-Method: POST
+Content-Type: application/json
+Headers: {Accept=[*/*], Cache-Control=[no-cache], connection=[keep-alive], Content-Length=[53], content-type=[application/json], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+Payload: {"User":{"city":"åäº¬","id":2,"username":"å°çº¢"}}
+--------------------------------------
+2019-12-01 20:26:25,372 - Outbound Message
+---------------------------
+ID: 7
+Response-Code: 204
+Content-Type: 
+Headers: {Date=[Sun, 01 Dec 2019 12:26:25 GMT], Content-Length=[0]}
+--------------------------------------
+2019-12-01 20:28:27,812 - Inbound Message
+----------------------------
+ID: 8
+Address: http://localhost:8002/ws/userService/user/1
+Http-Method: GET
+Content-Type: application/json
+Headers: {Accept=[application/xml], Cache-Control=[no-cache], connection=[keep-alive], content-type=[application/json], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+--------------------------------------
+2019-12-01 20:28:27,817 - Outbound Message
+---------------------------
+ID: 8
+Response-Code: 200
+Content-Type: application/xml
+Headers: {Content-Type=[application/xml], Date=[Sun, 01 Dec 2019 12:28:27 GMT]}
+Payload: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><User><city>天津</city><id>1</id><username>小明</username></User>
+--------------------------------------
+2019-12-01 20:33:43,163 - Inbound Message
+----------------------------
+ID: 9
+Address: http://localhost:8002/ws/userService/user
+Http-Method: GET
+Content-Type: application/json
+Headers: {Accept=[application/xml], Cache-Control=[no-cache], connection=[keep-alive], content-type=[application/json], Host=[localhost:8002], Pragma=[no-cache], User-Agent=[Apache CXF 3.0.1]}
+--------------------------------------
+2019-12-01 20:33:43,168 - Outbound Message
+---------------------------
+ID: 9
+Response-Code: 200
+Content-Type: application/xml
+Headers: {Content-Type=[application/xml], Date=[Sun, 01 Dec 2019 12:33:43 GMT]}
+Payload: <?xml version="1.0" encoding="UTF-8"?><Users><User><cars><carName>兰博基尼</carName><id>1</id><price>5.0E9</price></cars><cars><carName>宾利</carName><id>2</id><price>1.0E8</price></cars><city>天津</city><id>1</id><username>小明</username></User><User><city>北京</city><id>2</id><username>小红</username></User></Users>
+--------------------------------------

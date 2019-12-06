@@ -20,7 +20,7 @@ public class Server {
         JAXRSServerFactoryBean factory = new JAXRSServerFactoryBean();
 
         //设置服务地址
-        factory.setAddress("Http://localhost:8002/ws/");
+        factory.setAddress("http://localhost:8002/ws/");
 
         //设置服务类
         factory.setServiceBean(new IUserServiceImpl());
@@ -32,6 +32,6 @@ public class Server {
         //发布服务
         factory.create();
 
-        System.out.println("发布服务成功，服务端口为：8001");
+        System.out.println("发布服务成功，服务端口为：8002");
     }
 }
